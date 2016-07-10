@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "schedule": {
+        "type": "simple",
+        "interval": "100ms"
+    },
+    "max-failures": 10,
+    "workflow": {
+        "collect": {
+            "metrics": {
+                "/intel/scaleio/*/pendingMovingOutBckRebuildJobs": {},
+                "/intel/scaleio/*/snapCapacityInUseInKb": {},
+                "/intel/scaleio/*/bckRebuildWriteBwc/numOccured": {}
+            },
+            "config": {
+                "/intel/scaleio": {
+                    "username": "admin",
+                    "password": "F00barbaz",
+                    "gateway": "https://10.0.0.11",
+                    "verifySSL": false
+                }
+            }
+        }
+    }
+}
+
